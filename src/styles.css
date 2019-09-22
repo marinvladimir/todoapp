@@ -1,0 +1,330 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+div.container{
+    margin: 0px 40px;
+}
+
+.class1{
+    flex: 1 1 auto;
+}
+
+#BACK{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 60px;
+    height: 50px;
+    color: rebeccapurple;
+    background-color: rgba(111, 236, 86, 0.479);
+    border-style: inset;
+    border-color: rgba(255, 255, 255, 0.808);
+    border-width: 3px;
+    border-radius: 55%;
+}
+
+#EDIT{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 60px;
+    height: 50px;
+    color: rebeccapurple;
+    background-color: rgba(112, 240, 233, 0.596);
+    border-style: inset;
+    border-color: rgba(255, 255, 255, 0.808);
+    border-width: 3px;
+    border-radius: 55%;
+}
+
+#DELE{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    width: 60px;
+    height: 50px;
+    color: rebeccapurple;
+    background-color: rgba(157, 199, 247, 0.596);
+    border-style: inset;
+    border-color: rgba(255, 255, 255, 0.808);
+    border-width: 3px;
+    border-radius: 55%;
+}
+
+#title_1{
+    text-align: center; 
+    color: #9d6df7;
+    text-shadow: 2px 2px #f8e4e4;
+}
+
+#btns{
+    margin-top: 150px;
+    border-style: inset;
+    border-color: whitesmoke;
+    border-width: 1px;
+    height: 75px;
+    text-align: center; 
+}
+
+#row_info{ display: none }
+#key_info{ display: none }
+#id_info{ display: none }
+#name_info{ display: none }
+#desc_info{ display: none }
+#time_info{ display: none }
+
+#Detailed_Menu{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: rgb(81, 107, 98);
+    position: relative;
+    overflow: hidden;
+}
+#row{
+    background-color: #d9f2f754;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 10%;
+    width: 300px;
+    float: left;
+    height: 200px;
+    margin: 5px;
+    word-wrap: break-word;
+}
+#key{
+    background-color: #d9f2f754;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 10%;
+    width: 300px;
+    float: right;
+    height: 200px;
+    margin: 5px;
+    word-wrap: break-word;
+}
+#id{
+    background-color: #d9f2f754;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 15%;
+    width: 300px;
+    float: left;
+    height: 100px;
+    margin: 5px;
+}
+#name{
+    background-color: #d9f2f754;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 15%;
+    width: 300px;
+    overflow: hidden;
+    float: right;
+    height: 100px;
+    margin: 5px;
+}
+#desc{
+    background-color: #d9f2f754;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 15%;
+    width: 300px;
+    float: right;
+    height: 100px;
+    margin: 5px;
+}
+#time{
+    background-color: #d9f2f754;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 15%;
+    width: 300px;
+    overflow: hidden;
+    height: 100px;
+    float: left;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 64px;
+    color: rgba(35, 83, 146, 0.89);
+    background-color: rgba(138, 236, 228, 0.171);
+    border-color: rgba(5, 101, 114, 0.562);
+    border-style: dotted;
+    border-width: 2px;
+}
+
+form.item-form{
+   margin: 10px;
+}
+
+.controls{
+    width: 100%;
+    padding: 5%;
+}
+
+.controls > * {
+    width: 100%;
+}
+
+.bottom-fit{
+    padding-bottom: 10px;
+}
+
+.buttons button{
+    border-style: inset;
+    border-color: whitesmoke;
+    font-size: 17px;
+    top: -105px;
+    left: 10px;
+    margin: 3px;
+    width: 100px;
+}
+
+body{
+    background-color: rgba(66, 116, 209, 0.219);
+}
+
+snack-bar-container.success{
+    background-color: rgba(21, 187, 199, 0.37);
+    color: rgba(35, 13, 160, 0.671);
+    border-width: 10px;
+    border-style: inset;
+    border-color: rgba(191, 153, 228, 0.37);
+}
+
+snack-bar-container.warn{
+    background-color: rgba(231, 66, 66, 0.651);
+    color: rgba(160, 13, 13, 0.822);
+    border-width: 10px;
+    border-style: inset;
+    border-color: rgba(167, 29, 98, 0.37);
+}
+
+snack-bar-container.notification simple-snack-bar{
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.hide{
+    display: none
+}
+
+mat-footer-row mat-footer-cell {
+    justify-content: center;
+    font-style: oblique;
+    background-color: rgba(216, 250, 250, 0.123);
+    border-width: 1px;
+    border-style: dashed;
+    border-color: rgba(97, 90, 199, 0.39)
+}
+
+mat-header-row mat-header-cell{
+    background-color: rgba(216, 250, 250, 0.123);
+
+}
+
+/* filter controls */
+.search-div{
+    margin: 10px;
+      }
+      .search-form-field{
+          width: 60%;
+          margin-left: 10px;
+          padding: 5px 10px;
+          background-color: #bcd1f196;
+          border-radius: 5px;
+          }
+          .search-form-field div.mat-form-field-underline {
+              display: none;
+          }
+          .search-form-field div.mat-form-field-infix{
+              border-top: 0px;
+          }
+          .search-form-field div.mat-form-field-wrapper{
+            padding-bottom: 0px;
+          }
+         .search-form-field div.mat-form-field-suffix button{
+            height: 32px;
+            width: 32px;
+          }
+
+    .btn-dialog-close{
+        width: 45px;
+        min-width: 0px;
+        height: 40px;
+        padding: 0px;
+        background-color: rgba(147, 235, 241, 0.603);
+    }
+
+    .fill-remaining-space {
+        /* This fills the remaining space, by using flexbox. 
+           Every toolbar row uses a flexbox row layout. */
+        flex: 1 1 auto;
+      }
+
+    .confirm-dialog-container .mat-dialog-container {
+        border-radius: .25em .25em .4em .4em;
+        padding: 0px;
+        border-style: inset;
+        border-width: 5px;
+        background-color: rgba(130, 192, 228, 0.849);
+        border-color: rgba(28, 28, 180, 0.521);
+        }
+    .confirm-dialog-container .content-container{
+        margin: 5px 5px 15px 5px;
+        color: #08275e;
+        display: flex;
+    }
+    .confirm-dialog-container #close-icon{
+        margin-left: auto;
+        order: 2;
+        font-weight: bolder;
+    }
+    .confirm-dialog-container #close-icon:hover{
+    cursor: pointer;
+    }
+
+    .confirm-dialog-container #no-button{
+        height: 50px;
+        width: 50%;
+        background-color: #d3b407a8;
+        color: #08275e;
+        border-radius: 0px;
+        border-style: inset;
+        border-width: 2px;
+        border-color: rgba(87, 168, 214, 0.753);
+    }
+
+    .confirm-dialog-container #yes-button{
+        height: 50px;
+        width: 50%;
+        background-color: #406ecac9;
+        color: #08275e;
+        border-radius: 0px;
+        border-style: inset;
+        border-width: 2px;
+        border-color: rgba(87, 168, 214, 0.753);
+    }
+
+    .confirm-dialog-container span.content-span{
+        padding:  35px 16px;
+        text-align: center;
+        font-size: 20px;
+    }
