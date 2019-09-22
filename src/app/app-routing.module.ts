@@ -4,6 +4,7 @@ import { DetailedViewComponent } from './todolist/detailed-view/detailed-view.co
 import { TodolistComponent } from './todolist/todolist.component';
 
 const routes: Routes = [
+ { path: '', component: TodolistComponent },
  { path: '', redirectTo: '/ToDoList', pathMatch: 'full' },
  { path: 'ToDoList', component: TodolistComponent},
  { path: 'Detailed', component: DetailedViewComponent }
