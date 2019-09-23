@@ -4,8 +4,8 @@ import { DetailedViewComponent } from './todolist/detailed-view/detailed-view.co
 import { TodolistComponent } from './todolist/todolist.component';
 
 const routes: Routes = [
- { path: '', redirectTo: 'Todolist', component: TodolistComponent },
- { path: 'Detailed', component: DetailedViewComponent }
+ { path: '', redirectTo: 'todolist', component: TodolistComponent },
+ { path: 'detailed', component: DetailedViewComponent }
 ];
 
 @NgModule({
