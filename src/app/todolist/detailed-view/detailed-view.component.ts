@@ -93,7 +93,6 @@ searchKey: string;
       //let new_change = JSON.stringify(this.listData.filteredData[array_position]);
       //var element_row_detail: HTMLElement = document.getElementById('row') as HTMLElement 
       //element_row_detail.innerHTML = "Row: " + new_change;
-      this._location.back();
     });
   }
 

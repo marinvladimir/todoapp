@@ -173,6 +173,27 @@ form.item-form{
    margin: 10px;
 }
 
+.space{
+    margin: 15px;
+}
+
+.space2{
+    margin: 30px;
+}
+
+#del_sel{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: white;
+    border-style: inset;
+    background-color: #89a8df;
+    border-color: rgba(133, 133, 235, 0.658);
+}
+
 .controls{
     width: 100%;
     padding: 5%;

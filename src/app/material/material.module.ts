@@ -18,7 +18,8 @@ import * as Material from "@angular/material";
     Material.MatPaginatorModule,
     Material.MatSortModule,
     Material.MatDialogModule,
-    Material.MatTooltipModule
+    Material.MatTooltipModule,
+    Material.MatCheckboxModule,
   ],
   exports: [
     Material.MatToolbarModule,
@@ -33,7 +34,8 @@ import * as Material from "@angular/material";
     Material.MatPaginatorModule,
     Material.MatSortModule,
     Material.MatDialogModule,
-    Material.MatTooltipModule
+    Material.MatTooltipModule,
+    Material.MatCheckboxModule,
   ],
   declarations: []
 })

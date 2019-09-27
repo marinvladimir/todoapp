@@ -28,8 +28,11 @@
             <mat-cell *matCellDef="let element">{{element.time}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="actions">
-            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-header-cell *matHeaderCellDef><button id="del_sel" (click)="onDelMultiple()">Delete Selected</button></mat-header-cell>
             <mat-cell *matCellDef="let row">
+                <div class="space"></div>
+                <mat-checkbox class="CheckBox">  </mat-checkbox>
+                <div class="space2"></div>
                 <button mat-icon-button (click)="onEdit(row)" matTooltip="Edit"><mat-icon>launch</mat-icon></button>
                 <button mat-icon-button color="warn" (click) = "onDelete(row.$key)" matTooltip="Delete"><mat-icon>delete</mat-icon></button>
                 <a routerLink="/Detailed"><button mat-icon-button matTooltip="Detailed Page" (click) = "onDetail(row)"><mat-icon>tab</mat-icon></button></a>
@@ -45,10 +48,11 @@
                     No To-Do items!
                 </mat-footer-cell>
         </ng-container>
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-header-row *matHeaderRowDef="displayedColumns">
+        </mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
         <mat-footer-row *matFooterRowDef="['loading']" [ngClass] ="{'hide':listData!=null}"></mat-footer-row>
         <mat-footer-row *matFooterRowDef="['noData']" [ngClass] ="{'hide': !(listData!=null && listData.data.length == 0)}"></mat-footer-row>
     </mat-table>
-    <mat-paginator [pageSizeOptions] = "[5,10,25,50,100]" [pageSize] = "5" showFirstLastButtons></mat-paginator>
+    <mat-paginator id="pagin" [pageSizeOptions] = "[5,10,25,50,100]" [pageSize] = "5" showFirstLastButtons></mat-paginator>
 </div>

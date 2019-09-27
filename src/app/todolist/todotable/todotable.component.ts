@@ -2,10 +2,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { TodoitemService } from '../../shared/todoitem.service';
 import { MatTableDataSource, MatSort, MatPaginator, MatDialogConfig } from '@angular/material';
 import { MatDialog, MatDialogModule } from '@angular/material';
+import { MatCheckbox } from '@angular/material';
 import { TodoitemComponent } from '../todoitem/todoitem.component';
 import { NotificationService } from 'src/app/shared/notification.service';
 import { PopupService } from '../../shared/popup.service';
 import { EventEmitterService } from '../../shared/event-emitter.service';
+import { NumberValueAccessor } from '@angular/forms';
+import { CdkStepLabel } from '@angular/cdk/stepper';
 
 @Component({
   selector: 'app-todotable',
@@ -40,11 +43,7 @@ export class TodotableComponent implements OnInit {
           this.listData = new MatTableDataSource(array);
           this.listData.sort = this.sort;
           this.listData.paginator = this.paginator;
-      });
-
- 
-  }
-
+      });}
   
   OnXClick(){
     this.searchKey = "";
@@ -74,13 +73,41 @@ export class TodotableComponent implements OnInit {
   }
 
   onDelete($key){
-   this.popupService.openConfirmDialog("Are you sure you want to delete this records?").afterClosed().subscribe(
-     res => {
+   this.popupService.openConfirmDialog("Are you sure you want to delete this record?").afterClosed().subscribe(
+    res => {
        if(res){
          this.service.deleteItem($key);
-         this.notificationService.warn('Item was deleted.');
+         this.notificationService.warn('Record was deleted.');
        }
      });
+  }
+
+  onDelMultiple(){
+    var num = this.listData.filteredData;
+    var pag_size;
+    var list_of_keys = [];
+    if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "5" && num.length>5){ pag_size = 5; }
+    else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "10" && num.length>10){ pag_size = 10; }
+    else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "25" && num.length>25){ pag_size = 25; }
+    else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "50" && num.length>50){ pag_size = 50; }
+    else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "100" && num.length>100){ pag_size = 100; }
+    else{ pag_size = num.length;}
+    for(var i=0;i<pag_size;i++){
+      if(document.getElementsByClassName("CheckBox")[i].classList[3] != undefined && document.getElementsByClassName("CheckBox")[i].classList[3] != "mat-checkbox-anim-checked-unchecked")
+        {
+          list_of_keys.push(num[i].$key);
+        }
+      }
+      this.popupService.openConfirmDialog("Are you sure you want to delete those records?").afterClosed().subscribe(
+        res => {
+          if(res){
+            for(var k=0; k<list_of_keys.length; k++){             
+              this.service.deleteItem(list_of_keys[k]);
+            }
+            this.notificationService.warn('Records were deleted.');
+            }
+        }
+        );
   }
 
   onDetail(row){
