@@ -43,7 +43,8 @@ export class TodotableComponent implements OnInit {
           this.listData = new MatTableDataSource(array);
           this.listData.sort = this.sort;
           this.listData.paginator = this.paginator;
-      });}
+      });
+     }
   
   OnXClick(){
     this.searchKey = "";
@@ -101,11 +102,12 @@ export class TodotableComponent implements OnInit {
       this.popupService.openConfirmDialog("Are you sure you want to delete those records?").afterClosed().subscribe(
         res => {
           if(res){
+            if(list_of_keys.length>0){
             for(var k=0; k<list_of_keys.length; k++){             
               this.service.deleteItem(list_of_keys[k]);
             }
             this.notificationService.warn('Records were deleted.');
-            }
+            }}
         }
         );
   }
