@@ -16,7 +16,7 @@ export class TodoitemService {
     id: new FormControl('', Validators.required),
     name: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
-    time: new FormControl('', Validators.required),
+    time: new FormControl(''),
     additional: new FormControl(''),
   });
 
