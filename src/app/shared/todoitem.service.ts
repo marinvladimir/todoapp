@@ -17,6 +17,7 @@ export class TodoitemService {
     name: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     time: new FormControl('', Validators.required),
+    additional: new FormControl(''),
   });
 
   initializeFormGroup(){
@@ -26,6 +27,7 @@ export class TodoitemService {
       name: '',
       description: '',
       time: '',
+      additional: '',
     });
   }
 
@@ -40,6 +42,7 @@ export class TodoitemService {
       name: todoitem.name,
       description: todoitem.description,
       time: todoitem.time,
+      additional: todoitem.additional
     });
   }
 
@@ -49,6 +52,7 @@ export class TodoitemService {
       name: todoitem.name,
       description: todoitem.description,
       time: todoitem.time,
+      additional: todoitem.additional
     });
   }
 

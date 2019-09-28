@@ -24,8 +24,6 @@ export class DetailedViewComponent implements OnInit {
     public eventEmitterService: EventEmitterService ) { }
 
 listData: MatTableDataSource<any>;
-displayedColumns: string[] = ['id','name','description','time','actions'];
-searchKey: string;
 
   ngOnInit() {
     this.service.getTodo().subscribe(
@@ -68,6 +66,11 @@ searchKey: string;
     var element_time_detail: HTMLElement = document.getElementById('time') as HTMLElement
     var output_time = element_time.innerHTML; 
     element_time_detail.innerHTML = "Time: " + output_time;
+
+    var element_add: HTMLElement = document.getElementById('add_info') as HTMLElement
+    var element_add_detail: HTMLElement = document.getElementById('add') as HTMLElement
+    var output_add = element_add.innerHTML; 
+    element_add_detail.innerHTML = "Additional Info: " + output_add;
   }
 
   onEdit(){
@@ -122,6 +125,8 @@ searchKey: string;
       element_desc_detail.innerHTML = "";
     let element_time_detail: HTMLElement = document.getElementById('time_info') as HTMLElement
       element_time_detail.innerHTML = "";
+      let element_add_detail: HTMLElement = document.getElementById('add_info') as HTMLElement
+      element_add_detail.innerHTML = "";
 
     let element_row: HTMLElement = document.getElementById('row') as HTMLElement
       element_row.innerHTML = "";
@@ -135,6 +140,8 @@ searchKey: string;
      element_desc.innerHTML = "";
     let element_time: HTMLElement = document.getElementById('time') as HTMLElement
       element_time.innerHTML = "";
+    let element_add: HTMLElement = document.getElementById('add') as HTMLElement
+    element_add.innerHTML = "";
     this._location.back();
       }
 }

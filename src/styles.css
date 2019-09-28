@@ -62,7 +62,7 @@ div.container{
     background-color: rgba(174, 213, 223, 0.418);
     font-size: 28px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px #f8e4e4;
+    text-shadow: 2px 1px 2px #27d9df;
     border-style: inset;
     border-color: whitesmoke;
     border-width: 1px;
@@ -84,6 +84,7 @@ div.container{
 #name_info{ display: none }
 #desc_info{ display: none }
 #time_info{ display: none }
+#add_info{ display: none }
 
 #Detailed_Menu_left{
     text-align: center;
@@ -110,6 +111,31 @@ div.container{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+#Additional_info{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    color: rgb(81, 107, 98);
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#add{
+    background-color: #d0eea079;
+    margin-top: 5px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: rgba(234, 235, 250, 0.705);
+    border-radius: 10%;
+    width: 300px;
+    height: 150px;
+    margin: 5px;
+    word-wrap: break-word; 
 }
 #row{
     background-color: #a0eecd79;
@@ -142,7 +168,7 @@ div.container{
     border-style: ridge;
     border-width: 7px;
     border-color: rgba(234, 235, 250, 0.705);
-    border-radius: 15%;
+    border-radius: 10%;
     width: 300px;
     height: 150px;
     margin: 5px;
@@ -153,7 +179,7 @@ div.container{
     border-style: ridge;
     border-width: 7px;
     border-color: rgba(234, 235, 250, 0.705);
-    border-radius: 15%;
+    border-radius: 10%;
     width: 300px;
     height: 150px;
     margin: 5px;
@@ -164,7 +190,7 @@ div.container{
     border-style: ridge;
     border-width: 7px;
     border-color: rgba(234, 235, 250, 0.705);
-    border-radius: 15%;
+    border-radius: 10%;
     width: 300px;
     overflow: hidden;
     height: 150px;
@@ -176,7 +202,7 @@ div.container{
     border-style: ridge;
     border-width: 7px;
     border-color: rgba(234, 235, 250, 0.705);
-    border-radius: 15%;
+    border-radius: 10%;
     width: 300px;
     overflow: hidden;
     height: 150px;
