@@ -23,11 +23,10 @@ export class TodoitemComponent implements OnInit {
     var full_time = this.current_time.slice(1,this.current_time.length);
     full_time = this.current_time.slice(0,this.current_time.length-1);
     var date_only = full_time.slice(1,11);
-    var time_only = full_time.slice(12,this.current_time.length-6);
-    this.current_time = date_only + " " + time_only;
-    console.log(time_only);
-    console.log(date_only);
-    console.log(this.today);
+    var time_only_part1 = full_time.slice(12,this.current_time.length-12);
+    var hour = parseInt(time_only_part1) + 2;
+    var time_only_part2 = full_time.slice(14,this.current_time.length-6);
+    this.current_time = date_only + " " + hour + time_only_part2;
   }
 
   onClear(){
