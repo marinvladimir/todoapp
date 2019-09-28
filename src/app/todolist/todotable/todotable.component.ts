@@ -84,27 +84,21 @@ export class TodotableComponent implements OnInit {
   }
 
   onDelMultiple(){
+    let pag_view: HTMLElement = document.getElementsByClassName("mat-select-value")[0].lastChild.childNodes[1] as HTMLElement
     var num = this.listData.filteredData;
     var pag_size;
     var list_of_keys = [];
-    if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted") != undefined)
-    {
-      if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "5" && num.length>5){ pag_size = 5; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "10" && num.length>10){ pag_size = 10; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "25" && num.length>25){ pag_size = 25; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "50" && num.length>50){ pag_size = 50; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "100" && num.length>100){ pag_size = 100; }
-      else{ pag_size = num.length;}
-    }
-    else if (document.getElementsByClassName("ng-tns-c12-6 ng-star-inserted") != undefined)
-    {
-      if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "5" && num.length>5){ pag_size = 5; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "10" && num.length>10){ pag_size = 10; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "25" && num.length>25){ pag_size = 25; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "50" && num.length>50){ pag_size = 50; }
-      else if(document.getElementsByClassName("ng-tns-c11-6 ng-star-inserted")[0].textContent == "100" && num.length>100){ pag_size = 100; }
-      else{ pag_size = num.length;}
-    }
+      if(pag_view.innerHTML == "5" && num.length==5){ pag_size = 5; }
+      else if(pag_view.innerHTML == "10" && num.length==10){ pag_size = 10; }
+      else if(pag_view.innerHTML == "25" && num.length==25){ pag_size = 25; }
+      else if(pag_view.innerHTML == "50" && num.length==50){ pag_size = 50; }
+      else if(pag_view.innerHTML == "100" && num.length==100){ pag_size = 100; }
+      else if(document.getElementsByClassName("mat-table")[0].childNodes.length==7){ pag_size=1;}
+      else if(document.getElementsByClassName("mat-table")[0].childNodes.length==8){ pag_size=2;}
+      else if(document.getElementsByClassName("mat-table")[0].childNodes.length==9){ pag_size=3;}
+      else if(document.getElementsByClassName("mat-table")[0].childNodes.length==10){ pag_size=4;}
+      else if(document.getElementsByClassName("mat-table")[0].childNodes.length==11){ pag_size=5;}
+     // else{ pag_size = num.length;}
     for(var i=0;i<pag_size;i++){
       if(document.getElementsByClassName("CheckBox")[i].classList[3] != undefined && document.getElementsByClassName("CheckBox")[i].classList[3] != "mat-checkbox-anim-checked-unchecked")
         {
