@@ -31,8 +31,9 @@ export class TodoitemComponent implements OnInit {
 
   onSubmit(){
     if(this.service.form.valid){
-      if(!this.service.form.get('$key').value)
-      this.service.insertItem(this.service.form.value);
+      if(!this.service.form.get('$key').value){
+      this.service.form.value.time = this.current_time;
+      this.service.insertItem(this.service.form.value);}
       else
       this.service.updateItem(this.service.form.value);
       this.service.form.reset();
