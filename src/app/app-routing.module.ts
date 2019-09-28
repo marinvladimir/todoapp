@@ -5,6 +5,7 @@ import { TodolistComponent } from './todolist/todolist.component';
 
 const routes: Routes = [
  { path: '', redirectTo: '/Todoapp', pathMatch: 'full' },
+ { path: 'todoapp', redirectTo: '/Todoapp', pathMatch: 'full' },
  { path: 'Todoapp' , component: TodolistComponent },
  { path: 'Detailed', component: DetailedViewComponent }
 ];
