@@ -105,6 +105,7 @@ export class TodotableComponent implements OnInit {
           list_of_keys.push(num[i].$key);
         }
       }
+      if(list_of_keys.length != 0){
       this.popupService.openConfirmDialog("Are you sure you want to delete those records?").afterClosed().subscribe(
         res => {
           if(res){
@@ -115,7 +116,7 @@ export class TodotableComponent implements OnInit {
             this.notificationService.warn('Records were deleted.');
             }}
         }
-        );
+        );}
   }
 
   onDetail(row){
