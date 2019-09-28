@@ -21,7 +21,7 @@
                     <mat-error>Please provide the description for this item.</mat-error>
             </mat-form-field> 
             <mat-form-field>
-                    <input formControlName="time" type="datetime-local" matInput placeholder="Todo Time">
+                    <input id="time_form" formControlName="time"  matInput placeholder="Todo Time" value={{current_time}}>
             </mat-form-field> 
             <mat-form-field>
                 <input formControlName="additional" matInput placeholder="Additional Info">

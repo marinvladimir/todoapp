@@ -28,7 +28,7 @@ export class TodotableComponent implements OnInit {
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   searchKey: string;
-  mainKey: any;
+  mainKey: any;  
 
   ngOnInit() {
     this.service.getTodo().subscribe(
