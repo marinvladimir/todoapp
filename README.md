@@ -145,6 +145,7 @@ Last Commit:
     - Small css changes + small new feature (added additional database info)
     - Getting the time when task is created, instead of being user-input
     - Reading local time
+    - Finalizing, adding style changes
     
 For working GitHub Page, check:
     https://marinvladimir.github.io/todoapp/Todoapp
