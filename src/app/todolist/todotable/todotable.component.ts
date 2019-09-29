@@ -98,7 +98,7 @@ export class TodotableComponent implements OnInit {
       else if(document.getElementsByClassName("mat-table")[0].childNodes.length==9){ pag_size=3;}
       else if(document.getElementsByClassName("mat-table")[0].childNodes.length==10){ pag_size=4;}
       else if(document.getElementsByClassName("mat-table")[0].childNodes.length==11){ pag_size=5;}
-     // else{ pag_size = num.length;}
+      else{ pag_size = num.length }
     for(var i=0;i<pag_size;i++){
       if(document.getElementsByClassName("CheckBox")[i].classList[3] != undefined && document.getElementsByClassName("CheckBox")[i].classList[3] != "mat-checkbox-anim-checked-unchecked")
         {

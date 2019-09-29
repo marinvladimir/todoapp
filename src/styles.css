@@ -361,7 +361,7 @@ mat-header-row mat-header-cell{
       }
 
     .mat-dialog-container{
-        background-color: rgba(169, 240, 240, 0.966);
+        background-color: rgb(169, 195, 206);
         border-style: ridge;
         border-width: 25px;
         border-color: rgb(221, 244, 252);
