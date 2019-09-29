@@ -236,10 +236,11 @@ form.item-form{
     justify-content: center;
     margin-top: 5px;
     margin-right: 5px;
-    color: white;
+    color: rgba(33, 84, 151, 0.555);
     border-style: inset;
-    background-color: #89a8df;
-    border-color: rgba(133, 133, 235, 0.658);
+    border-width: 3px;
+    background-color: #b8f3df;
+    border-color: rgba(70, 197, 165, 0.795);
 }
 
 .controls{
@@ -258,11 +259,25 @@ form.item-form{
 .buttons button{
     border-style: inset;
     border-color: whitesmoke;
-    font-size: 17px;
-    top: -105px;
+    font-size: 15px;
+    top: -55px;
     left: 10px;
     margin: 3px;
     width: 100px;
+}
+
+.mat-table{
+    background-color: rgba(186, 248, 230, 0.253);
+    border-style: groove;
+    border-color: rgba(87, 218, 179, 0.432);
+    border-width: 5px;
+}
+
+.mat-paginator-container{
+    background-color: rgba(132, 214, 214, 0.541);
+    border-style: groove;
+    border-color: rgba(87, 218, 179, 0.432);
+    border-width: 5px;
 }
 
 body{
@@ -299,9 +314,6 @@ mat-footer-row mat-footer-cell {
     justify-content: center;
     font-style: oblique;
     background-color: rgba(216, 250, 250, 0.123);
-    border-width: 1px;
-    border-style: dashed;
-    border-color: rgba(97, 90, 199, 0.39)
 }
 
 mat-header-row mat-header-cell{
@@ -347,6 +359,13 @@ mat-header-row mat-header-cell{
            Every toolbar row uses a flexbox row layout. */
         flex: 1 1 auto;
       }
+
+    .mat-dialog-container{
+        background-color: rgba(169, 240, 240, 0.966);
+        border-style: ridge;
+        border-width: 25px;
+        border-color: rgb(221, 244, 252);
+    }
 
     .confirm-dialog-container .mat-dialog-container {
         border-radius: .25em .25em .4em .4em;

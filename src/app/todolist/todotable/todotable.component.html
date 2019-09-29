@@ -1,6 +1,6 @@
 <div class="search-div">
-    <button mat-raised-button (click) = "Create()">
-        <mat-icon>add</mat-icon>Create
+    <button mat-raised-button color="primary" (click) = "Create()">
+        <mat-icon>note_add</mat-icon>Create
     </button>
     <mat-form-field class="search-form-field" floatLabel = "never">
         <input matInput [(ngModel)] = "searchKey" placeholder="Search" autocomplete="off" (keyup)= "SearchEng()">
@@ -31,11 +31,11 @@
             <mat-header-cell *matHeaderCellDef><button id="del_sel" (click)="onDelMultiple()">Delete Selected</button></mat-header-cell>
             <mat-cell *matCellDef="let row">
                 <div class="space"></div>
-                <mat-checkbox class="CheckBox">  </mat-checkbox>
+                <mat-checkbox class="CheckBox" color="primary">  </mat-checkbox>
                 <div class="space2"></div>
-                <button mat-icon-button (click)="onEdit(row)" matTooltip="Edit"><mat-icon>launch</mat-icon></button>
-                <button mat-icon-button color="warn" (click) = "onDelete(row.$key)" matTooltip="Delete"><mat-icon>delete</mat-icon></button>
-                <a routerLink="/Detailed"><button mat-icon-button matTooltip="Detailed Page" (click) = "onDetail(row)"><mat-icon>tab</mat-icon></button></a>
+                <button mat-icon-button color="primary" (click)="onEdit(row)" matTooltip="Edit"><mat-icon>launch</mat-icon></button>
+                <button mat-icon-button color="primary" (click) = "onDelete(row.$key)" matTooltip="Delete"><mat-icon>clear</mat-icon></button>
+                <a routerLink="/Detailed"><button mat-icon-button  color="primary" matTooltip="Detailed Page" (click) = "onDetail(row)"><mat-icon>tab</mat-icon></button></a>
             </mat-cell>
         </ng-container>
         <ng-container matColumnDef="loading">
