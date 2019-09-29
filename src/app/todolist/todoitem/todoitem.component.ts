@@ -26,6 +26,7 @@ export class TodoitemComponent implements OnInit {
 
   onClear(){
     this.service.form.reset();
+    console.log(this.service.form.value);
     this.service.initializeFormGroup();
   }
 
