@@ -147,6 +147,15 @@ Last Commit:
     - Reading local time
     - Finalizing, adding style changes
     
+In case of running locally:
+
+     - Step 1: git pull <HTTPS/SSH path>
+     - Step 2: in case of "An unhandled exception occurred: Could not find module "@angular-devkit/build-angular"",
+       use this command in the folder where you did the pull request:
+       npm install --save-dev @angular-devkit/build-angular 
+     - Step 3: ng serve
+       In the future, just use ng serve every time you run it (skip steps 1,2)
+    
 For working GitHub Page, check:
     https://marinvladimir.github.io/todoapp/Todoapp
 
